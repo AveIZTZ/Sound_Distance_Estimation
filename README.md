@@ -2,6 +2,5 @@
 
 ## Installation Guide
 ```python
-def hello():
-    print("Hello, World!")
-
+cd Solution_on_3D_SELD
+pip install -r requirements.txt
