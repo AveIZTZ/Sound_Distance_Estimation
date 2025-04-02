@@ -8,8 +8,8 @@ conda activate dist
 pip install -r requirements.txt
 ```
 ## Extract Audio Features
-in dist_model_code/batch_feature_extraction.py, line 104 and 105:
 ```python
+# in dist_model_code/batch_feature_extraction.py, line 104 and 105:
 dataset_dir = '...'
 feat_label_dir = '...'
 
