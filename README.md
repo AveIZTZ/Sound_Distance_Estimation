@@ -3,10 +3,12 @@ This is the baseline for sound distance estimation in IASP lab.
 
 ## Installation Guide
 ```python
-cd Solution_on_3D_SELD
+conda create --name dist python=3.8
+conda activate dist
 pip install -r requirements.txt
 ```
 ## Extract Audio Features
+in 
 ```python
 dataset_dir = '...'
 feat_label_dir = '...'
