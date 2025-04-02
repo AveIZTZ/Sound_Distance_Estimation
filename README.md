@@ -35,6 +35,6 @@ python dist_model_code/train_seldnet.py 4
 ```
 Training Starss with TAPE(Thresholded mean absolute error) threshold of 0.4 loss
 
-```python
+```
 python dist_model_code/train_seldnet.py 5
 ```
