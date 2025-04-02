@@ -21,4 +21,8 @@ python dist_model_code/batch_feature_extraction.py
 ### Event detection based pre-training:
 
 We already provide a pre-trained model at models/pretrained_dcase_event_detector.h5 . So this step is optional.
+
 Pretraining only the event classifier
+```python
+python dist_model_code/train_seldnet.py 2
+```
