@@ -21,7 +21,7 @@ params['feat_label_dir'] = 'data_new/processed/'
 # Extract audio features
 python dist_model_code/batch_feature_extraction.py
 
-# Change lines in .csv files:
+# Change lines in .npy files:
 fold_name = “”
 npy_folder = "data_new/processed/mic_dev_label"
 csv_folder = "data_new/input/metadata_dev/test"
