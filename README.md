@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 ## Extract Audio Features
 ```
-# in dist_model_code/batch_feature_extraction.py, line 104 and 105:
+# in dist_model_code/parameters.py, line 104 and 105:
 params['dataset_dir'] = 'data_new/input/'
 params['feat_label_dir'] = 'data_new/processed/'
 
@@ -30,6 +30,13 @@ python process_zyj/change.py
 ```
 
 ## Model Training
+
+### Change data path in dist_model_code/parameters.py, line 152 and 153:
+```
+params['dataset_dir'] = '……/input/'
+params['feat_label_dir'] = '……/processed/'
+```
+
 ### Event detection based pre-training:
 
 We already provide a pre-trained model at models/pretrained_dcase_event_detector.h5 . So this step is optional.
