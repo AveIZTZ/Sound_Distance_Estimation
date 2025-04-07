@@ -7,5 +7,5 @@ ipython
 numpy==1.26.4
 librosa==0.10.1
 torch==2.2.1
-numba==0.59.2
+numba==0.59.0
 tqdm
