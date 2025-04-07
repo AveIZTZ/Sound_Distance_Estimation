@@ -32,7 +32,7 @@ python process_zyj/change.py
 
 ## Model Training
 
-### Change data path in dist_model_code/parameters.py, line 152 and 153:
+### Change data path in dist_model_code/parameters.py, line 152, 153, and 158:
 ```
 params['dataset_dir'] = '……/input/'
 params['feat_label_dir'] = '……/processed/'
