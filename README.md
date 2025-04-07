@@ -8,6 +8,7 @@ conda activate dist
 pip install -r requirements.txt
 ```
 ## Datasets
+The array is a linear array with 64 microphones spaced 0.02 meters apart. The sound source is located in the endfire direction at a distance ranging from 0 to 1.5 meters.
 ```
 /home/yujiezhu/code/sound_distance_estimation/data_new/input
 ```
