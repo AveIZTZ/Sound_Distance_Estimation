@@ -3,7 +3,7 @@ This is the baseline for sound distance estimation task in IASP lab.
 
 ## Installation Guide
 ```
-conda create --name dist python=3.8
+conda create --name dist python=3.9
 conda activate dist
 pip install -r requirements.txt
 ```
