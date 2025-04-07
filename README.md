@@ -1,5 +1,5 @@
 # Sound_Distance_Estimation
-This is the baseline for sound distance estimation in IASP lab.
+This is the baseline for sound distance estimation task in IASP lab.
 
 ## Installation Guide
 ```
