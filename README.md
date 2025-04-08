@@ -16,8 +16,8 @@ The array is a linear array with 64 microphones spaced 0.02 meters apart. The so
 ## Extract Audio Features
 ```
 # in dist_model_code/parameters.py, line 104 and 105:
-params['dataset_dir'] = '/home/yujiezhu/code/sound_distance_estimation/data_new/input'
-params['feat_label_dir'] = '……/data_new/processed/'
+params['dataset_dir'] = '/home/yujiezhu/code/sound_distance_estimation/data_new/input' # stable path
+params['feat_label_dir'] = '……/data_new/processed/' # your own path
 
 # Extract audio features
 python dist_model_code/batch_feature_extraction.py
