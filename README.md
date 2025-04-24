@@ -13,6 +13,7 @@ The array is a linear array with 64 microphones spaced 0.02 meters apart. The so
 /home/yujiezhu/data/data_for_SED/
 ```
 ./input: raw data
+
 ./processed: features
 
 ## Extract Audio Features
