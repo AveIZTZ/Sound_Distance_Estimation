@@ -20,8 +20,9 @@ dataset_dir   ='/home/yujiezhu/data/data_for_SED/test/input/',
 feat_label_dir='/home/yujiezhu/data/data_for_SED/test/processed/',
 ```
 # Extract audio features
+```
 python dist_model_code/batch_feature_extraction.py
-
+```
 ## Model Training
 
 ### Change output path in config/A_RC_SED-SDE.yaml:
