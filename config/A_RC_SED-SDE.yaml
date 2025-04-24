@@ -1,0 +1,80 @@
+quick_test: False  # To do quick test. Trains/test on small subset of dataset, and # of epochs
+finetune_mode: False
+pretrained_model_weights: 'models/pretrained_dcase_event_detector.h5'
+
+# OUTPUT PATHS
+model_dir: '/home/yujiezhu/code/Sound_Distance_Estimation/models/'  # Dumps the trained models and training curves in this folder
+dcase_output_dir: '/home/yujiezhu/code/Sound_Distance_Estimation/results/'  # recording-wise results are dumped in this path.
+output_dir: '/home/yujiezhu/code/Sound_Distance_Estimation/CRNN_0422/'  # recording-wise results are dumped in this path.
+
+# DATASET LOADING PARAMETERS
+mode: 'dev'     # 'dev' - development or 'eval' - evaluation dataset
+dataset: 'mic'  # 'foa' - ambisonic or 'mic' - microphone signals
+
+# FEATURE PARAMS
+fs: 16000
+hop_len_s: 0.016
+label_hop_len_s: 0.08
+max_audio_len_s: 60
+nb_mel_bins: 64
+
+use_salsalite: False  # Used for MIC dataset only. If true use salsalite features, else use GCC features
+fmin_doa_salsalite: 50
+fmax_doa_salsalite: 2000
+fmax_spectra_salsalite: 9000
+
+# MODEL TYPE
+multi_accdoa: False  # False - Single-ACCDOA or True - Multi-ACCDOA
+thresh_unify: 15  # Required for Multi-ACCDOA only. Threshold of unification for inference in degrees.
+
+# DNN MODEL PARAMETERS
+label_sequence_length: 50  # Feature sequence length
+batch_size: 128  # Batch size
+dropout_rate: 0.05  # Dropout rate, constant for all layers
+nb_cnn2d_filt: 64  # Number of CNN nodes, constant for each layer
+f_pool_size: [4, 4, 2]
+# CNN frequency pooling, length of list = number of CNN layers, list value = pooling per layer
+
+nb_rnn_layers: 2
+rnn_size: 128  # RNN contents, length of list = number of layers, list value = number of nodes
+
+self_attn: False
+nb_heads: 4
+
+nb_fnn_layers: 1
+fnn_size: 128  # FNN contents, length of list = number of layers, list value = number of nodes
+
+nb_epochs: 100  # Train for maximum epochs
+lr: 0.001
+
+# METRIC
+average: 'macro'  # Supports 'micro': sample-wise average and 'macro': class-wise average
+lad_doa_thresh: 20
+
+# distance
+train_synth_test_synth: False
+only_dist: True
+patience: 40
+overfit: False
+# permutation 1: using original event mask | Won't propogate error for missing events
+permutation_1: False
+
+# permutation 2: MSE(y,y_hat) + CE(M,M_hat)
+permutation_2: False # Not completely implemented yet
+perm_2_loss_type: 'mse' # possible values: mse, mae, mape, mspe, thr_mape
+perm_2_loss_mpe_type_thr: 0.1
+perm_2_onlyMask: False
+
+permutation_3: True  # Not completely implemented yet
+perm_3_loss_type: 'thr_mape'  # possible values: mse, mae, mape, mspe, thr_mape
+perm_3_loss_mpe_type_thr: 0.4
+perm_3_onlyMask: False
+
+synth_and_real_dcase: False # use synth and modified real dcase dataset
+chan_swap_aug: False # use channel swap augmentation
+chan_aug_folds: [1,3]
+use_all_data: False # use dcase, starss, locata, metu, marco
+use_ind_data: True  # Is use one of the above datasets
+ind_data_train_test_split: [[11], [15], [12]] # train and test split [Default is Dcase]
+
+unique_classes: 13
