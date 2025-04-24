@@ -18,7 +18,7 @@ The array is a linear array with 64 microphones spaced 0.02 meters apart. The so
 # in dist_model_code/parameters_z.py:
 dataset_dir   ='/home/yujiezhu/data/data_for_SED/test/input/',
 feat_label_dir='/home/yujiezhu/data/data_for_SED/test/processed/',
-
+```
 # Extract audio features
 python dist_model_code/batch_feature_extraction.py
 
@@ -29,7 +29,6 @@ python dist_model_code/batch_feature_extraction.py
 model_dir: 
 dcase_output_dir: 
 output_dir: 
-
 ```
 
 ### Distance estimation model training:
